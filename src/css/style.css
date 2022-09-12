@@ -1,17 +1,26 @@
 :root {
-  --pl-blue: rgba(59, 130, 246, 0.1);
-  --pl-pink: rgb(254, 236, 220);
-  --pl-yellow: rgb(252, 233, 106);
-  --pl-gray-light: rgb(237, 238, 241);
-  --pl-gray-dark: rgb(180, 184, 194);
-  --pl-orange: rgb(255, 90, 31);
+  --pl-blue: rgb(59 130 245 / 10%);
+
+  /* --pl-blue: #b7e1dc; */
+  --pl-pink: rgb(254 236 220);
+
+  /* --pl-pink: rgb(255 215 166); */
+  --pl-yellow: rgb(252 233 106);
+  --pl-gray-light: rgb(237 238 241);
+  --pl-gray-dark: rgb(180 184 194);
+  --pl-orange: #ff5a1f;
   --pl-text: #0e3060;
 }
 
 html * {
-  outline: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+.main-text-color {
+  color: var(--pl-text);
+  text-decoration: none;
 }
 
 div,
@@ -20,12 +29,16 @@ section {
 }
 
 section {
-  padding-top: 24px;
+  padding-top: 22px;
+}
+
+.palitra-font {
+  font-family: Neucha, cursive;
 }
 
 .palitra {
   position: relative;
-  padding-top: 24px;
+  padding-top: 22px;
 }
 
 .palitra .sky-color {
@@ -33,8 +46,8 @@ section {
   top: 20px;
   width: 47%;
   height: 740px;
-  border-radius: 0 400px 400px 0;
   background-color: var(--pl-pink);
+  border-radius: 0 400px 400px 0;
 }
 
 .palitra .img-palitra {
@@ -45,20 +58,17 @@ section {
 
 @media screen and (max-width: 991px) {
   .palitra .img-palitra {
-    margin-top: 11px;
-    width: 100%;
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    margin-top: 11px;
+    text-align: center;
   }
 }
 
 .palitra .margin {
   position: relative;
-}
-
-.margin {
   width: 1140px;
   margin: 0 auto;
 }
@@ -67,25 +77,29 @@ section {
   background-color: var(--pl-blue);
 }
 
+.bg-pink-color {
+  background-color: var(--pl-pink);
+}
+
 .palitra .h2 {
-  white-space: pre-wrap;
-  text-align: center;
   margin-top: 41px;
   color: var(--pl-text);
+  white-space: pre-wrap;
+  text-align: center;
 }
 
 .palitra .logo-desc a {
+  margin-top: 58px;
   padding: 25px 45px;
-  background: var(--pl-blue);
-  border-radius: 100px;
-  font-family: "Montserrat", sans-serif;
+  color: var(--pl-text);
   font-weight: 600;
   font-size: 26px;
+  font-family: Montserrat, sans-serif;
   line-height: 28px;
-  color: var(--pl-text);
-  text-transform: uppercase;
   text-align: center;
-  margin-top: 58px;
+  text-transform: uppercase;
+  background: var(--pl-blue);
+  border-radius: 100px;
 }
 
 @media screen and (max-width: 991px) {
@@ -125,8 +139,8 @@ section {
 
 @media screen and (max-width: 991px) {
   .palitra .img-palitra .img-palitra-mob {
-    width: 50%;
     position: relative;
+    width: 50%;
   }
 }
 
@@ -146,15 +160,80 @@ section {
 
 @media screen and (max-width: 991px) {
   .palitra .logo-desc {
-    margin-top: 0;
-    width: 100%;
     align-items: center;
+    width: 100%;
+    margin-top: 0;
   }
 }
 
 @media screen and (max-width: 740px) {
   .palitra .logo-desc {
-    margin-top: 0;
     width: 100%;
+    margin-top: 0;
   }
+}
+
+.slider-thumb::before {
+  position: absolute;
+  right: -58px;
+  bottom: -142px;
+  z-index: -1;
+  display: block;
+  width: 785px;
+  height: 785px;
+  background: var(--pl-pink);
+  border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+  animation: sliderShape 5s linear infinite;
+  animation: sliderShape 5s linear infinite;
+  will-change: border-radius, transform, opacity;
+  content: "";
+}
+
+@keyframes sliderShape {
+  0%,
+  100% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+
+  34% {
+    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+  }
+
+  50% {
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+  }
+}
+
+.dtr-social-list {
+  margin: 0;
+}
+
+.dtr-social-list li {
+  display: inline-block;
+  margin: 0 10px;
+  list-style: none;
+}
+
+.dtr-social-list a {
+  position: relative;
+  z-index: 9;
+  display: block;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  border: 0;
+  border-radius: 0;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: var(--pl-orange);
+  border-color: var(--pl-orange);
 }
