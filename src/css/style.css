@@ -6,21 +6,37 @@
 
   /* --pl-pink: rgb(255 215 166); */
   --pl-yellow: rgb(252 233 106);
+  --pl-yellow2: rgb(255 255 255);
   --pl-gray-light: rgb(237 238 241);
   --pl-gray-dark: rgb(180 184 194);
   --pl-orange: #ff5a1f;
   --pl-text: #0e3060;
+  --border-radius: 0.25rem;
+}
+
+.btn {
+  border-radius: var(--border-radius);
 }
 
 html * {
   margin: 0;
   padding: 0;
+  color: var(--pl-text);
   outline: none;
 }
 
 .main-text-color {
   color: var(--pl-text);
   text-decoration: none;
+}
+
+.text-orange {
+  color: var(--pl-orange);
+  text-decoration: none;
+}
+
+.bg-blue-2 {
+  background-color: var(--pl-yellow2);
 }
 
 div,
@@ -30,6 +46,23 @@ section {
 
 section {
   padding-top: 22px;
+}
+
+.card {
+  /* padding: 14px 80px 18px 36px;
+  background: #fff;
+  border-radius: 4px; */
+
+  /* box-shadow: 0 6px 10px rgb(0 0 0 / 8%), 0 0 6px rgb(0 0 0 / 5%); */
+  cursor: pointer;
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px rgb(0 0 0 / 12%), 0 4px 8px rgb(0 0 0 / 6%);
+  transform: scale(1.05);
 }
 
 .palitra-font {
