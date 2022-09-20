@@ -1,16 +1,13 @@
 :root {
   --pl-blue: rgb(59 130 245 / 10%);
-
-  /* --pl-blue: #b7e1dc; */
-  --pl-pink: rgb(254 236 220);
-
-  /* --pl-pink: rgb(255 215 166); */
+  --pl-pink: #feecdc;
   --pl-yellow: rgb(252 233 106 / 25%);
   --pl-cart-shop: rgb(255 255 255);
   --pl-gray-light: rgb(237 238 241);
   --pl-gray-dark: rgb(180 184 194);
   --pl-orange: #ff5a1f;
   --pl-text: #0e3060;
+  --pl-gray-text: #727272;
   --border-radius: 0.25rem;
 }
 
@@ -27,6 +24,11 @@ html * {
 
 .main-text-color {
   color: var(--pl-text);
+  text-decoration: none;
+}
+
+.text-gray {
+  color: var(--pl-gray-text);
   text-decoration: none;
 }
 
@@ -279,7 +281,7 @@ section {
   list-style: none;
 }
 
-.dtr-social-list a {
+/* .dtr-social-list a {
   position: relative;
   z-index: 9;
   display: block;
@@ -288,10 +290,34 @@ section {
   text-align: center;
   border: 0;
   border-radius: 0;
-}
+} */
 
 .btn-info {
   color: #fff;
   background-color: var(--pl-orange);
   border-color: var(--pl-orange);
 }
+
+.pulse-logo {
+  box-shadow: 0 0 0 0 rgba(#5a99d4, 0.5);
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+
+  70% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+/* .carousel-item {
+  height: 500px;
+} */
