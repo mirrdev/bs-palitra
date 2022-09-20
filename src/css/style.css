@@ -318,6 +318,14 @@ section {
   }
 }
 
-.carousel-indicators {
+/* .carousel-indicators {
   filter: invert(50%);
+} */
+
+.carousel-indicators > [data-bs-target] {
+  background-color: var(--pl-text);
+}
+
+.carousel-indicators .active {
+  background-color: var(--pl-text);
 }
