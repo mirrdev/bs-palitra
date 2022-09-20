@@ -318,3 +318,6 @@ section {
   }
 }
 
+.carousel-indicators {
+  filter: invert(50%);
+}
