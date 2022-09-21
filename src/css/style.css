@@ -235,7 +235,7 @@ section {
 
 .slider-thumb::before {
   position: absolute;
-  right: -58px;
+  right: 28px;
   bottom: -142px;
   z-index: -1;
   display: block;
@@ -243,13 +243,12 @@ section {
   height: 785px;
   background: var(--pl-pink);
   border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
-  animation: sliderShape 5s linear infinite;
-  animation: sliderShape 5s linear infinite;
+  animation: slider-shape 5s linear infinite;
   will-change: border-radius, transform, opacity;
   content: "";
 }
 
-@keyframes sliderShape {
+@keyframes slider-shape {
   0%,
   100% {
     border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
