@@ -72,7 +72,6 @@ section {
   background: #fff;
   border-radius: 4px; */
 
-
   /* box-shadow: 0 6px 10px rgb(0 0 0 / 8%), 0 0 6px rgb(0 0 0 / 5%); */
 
   /* max-height: 250px; */
@@ -306,15 +305,13 @@ section {
   border-color: var(--pl-text);
 }
 
-
-
 .btn:first-child:hover,
+.btn:first-child:focus,
 :not(.btn-check) + .btn:hover {
   color: var(--pl-text);
   background-color: var(--pl-pink);
   border-color: var(--pl-text);
 }
-
 
 .btn-info:disabled {
   color: var(--pl-gray-text);
@@ -330,65 +327,38 @@ section {
 }
 
 .portfolio-item img {
-	width: 80%;
+  width: 80%;
 }
-
 
 .portfolio-item {
   position: relative;
-
 }
 
-.portfolio-item:hover  .portfolio-text{
-	transform: translateY(0);
-	transform: translateY(0);
-	transform: translateY(0);
-	transform: translateY(0);
-	transform: translateY(0);
-	visibility: visible;
-	opacity: 1;
-
-}
-
-.portfolio-text {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 2;
-	padding: 30px;
-	transform: translateY(-30px);
-	transform: translateY(-30px);
-	transform: translateY(-30px);
-	transform: translateY(-30px);
-	transform: translateY(-30px);
-	visibility: hidden;
-	opacity: 0;
-	transition: .3s;
-	transition: .3s;
-	transition: .3s;
-	transition: .3s;
-	transition: .3s;
-
+.portfolio-item:hover .portfolio-text {
+  transform: translateY(0);
+  transform: translateY(0);
+  transform: translateY(0);
+  transform: translateY(0);
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
 }
 
 .portfolio-item::before {
   position: absolute;
   top: 0;
-	left: 0;
-	z-index: 1;
+  left: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
   background: #ff3d4f;
   opacity: 0;
-  transition: .3s;
+  transition: 0.3s;
   content: "";
-
 }
 
 .portfolio-item:hover::before {
   opacity: 1;
-
 }
 
 .portfolio-text span {
@@ -397,7 +367,6 @@ section {
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
-
 }
 
 .portfolio-text h2 {
@@ -405,14 +374,11 @@ section {
   margin-bottom: 0;
   color: #fff;
   font-weight: 700;
-
 }
 
 .portfolio-text h2 a:hover {
   color: #222;
-
 }
-
 
 /* 9. Education */
 
@@ -519,6 +485,4 @@ section {
 
 .carousel-indicators .active {
   background-color: var(--pl-text);
-}
-
 }
