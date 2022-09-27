@@ -1,5 +1,9 @@
 :root {
   --pl-blue: rgb(59 130 245 / 10%);
+  --pl-white: #fff;
+
+  /* --pl-pink: #f5c194; */
+
   --pl-pink: #feecdc;
   --pl-yellow: rgb(252 233 106 / 25%);
   --pl-cart-shop: rgb(255 255 255);
@@ -22,7 +26,16 @@ html * {
   outline: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 .main-text-color {
+  color: var(--pl-text);
+  text-decoration: none;
+}
+
+.accordion-button {
   color: var(--pl-text);
   text-decoration: none;
 }
@@ -58,18 +71,24 @@ section {
   /* padding: 14px 80px 18px 36px;
   background: #fff;
   border-radius: 4px; */
-  height: 250px;
+
 
   /* box-shadow: 0 6px 10px rgb(0 0 0 / 8%), 0 0 6px rgb(0 0 0 / 5%); */
-  max-height: 250px;
+
+  /* max-height: 250px; */
   cursor: pointer;
   transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
     0.3s box-shadow,
     0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
 }
 
-.card:hover {
+.card-shop {
+  height: 250px;
   max-height: 250px;
+}
+
+.card:hover {
+  /* max-height: 250px; */
   box-shadow: 0 10px 20px rgb(0 0 0 / 12%), 0 4px 8px rgb(0 0 0 / 6%);
   transform: scale(1.05);
 }
@@ -280,27 +299,200 @@ section {
   list-style: none;
 }
 
-/* .dtr-social-list a {
-  position: relative;
-  z-index: 9;
-  display: block;
-  font-size: 16px;
-  line-height: 16px;
-  text-align: center;
-  border: 0;
-  border-radius: 0;
-} */
-
 .btn-info {
-  color: #fff;
-  background-color: var(--pl-orange);
-  border-color: var(--pl-orange);
+  color: var(--pl-white);
+  background-color: var(--pl-text);
+  border: 1px solid var(--pl-text);
+  border-color: var(--pl-text);
+}
+
+
+
+.btn:first-child:hover,
+:not(.btn-check) + .btn:hover {
+  color: var(--pl-text);
+  background-color: var(--pl-pink);
+  border-color: var(--pl-text);
+}
+
+
+.btn-info:disabled {
+  color: var(--pl-gray-text);
+  background-color: #fff;
+  border: 1px solid var(--pl-gray-text);
+  border-color: var(--pl-gray-text);
 }
 
 .pulse-logo {
   box-shadow: 0 0 0 0 rgba(#5a99d4, 0.5);
   cursor: pointer;
   animation: pulse 1.5s infinite;
+}
+
+.portfolio-item img {
+	width: 80%;
+}
+
+
+.portfolio-item {
+  position: relative;
+
+}
+
+.portfolio-item:hover  .portfolio-text{
+	transform: translateY(0);
+	transform: translateY(0);
+	transform: translateY(0);
+	transform: translateY(0);
+	transform: translateY(0);
+	visibility: visible;
+	opacity: 1;
+
+}
+
+.portfolio-text {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	padding: 30px;
+	transform: translateY(-30px);
+	transform: translateY(-30px);
+	transform: translateY(-30px);
+	transform: translateY(-30px);
+	transform: translateY(-30px);
+	visibility: hidden;
+	opacity: 0;
+	transition: .3s;
+	transition: .3s;
+	transition: .3s;
+	transition: .3s;
+	transition: .3s;
+
+}
+
+.portfolio-item::before {
+  position: absolute;
+  top: 0;
+	left: 0;
+	z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: #ff3d4f;
+  opacity: 0;
+  transition: .3s;
+  content: "";
+
+}
+
+.portfolio-item:hover::before {
+  opacity: 1;
+
+}
+
+.portfolio-text span {
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+}
+
+.portfolio-text h2 {
+  margin-top: 14px;
+  margin-bottom: 0;
+  color: #fff;
+  font-weight: 700;
+
+}
+
+.portfolio-text h2 a:hover {
+  color: #222;
+
+}
+
+
+/* 9. Education */
+
+.pt-120 {
+  padding-top: 80px;
+}
+
+.pb-90 {
+  padding-bottom: 90px;
+}
+
+.mb-50 {
+  margin-bottom: 20px;
+}
+
+.mt-80 {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 991px) {
+  #products {
+    margin-top: 200px;
+  }
+}
+
+.education-header h4 {
+  margin-bottom: 20px;
+  color: #ff3d4f;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: Rubik, sans-serif;
+}
+
+.education-header h1 {
+  margin-bottom: 22px;
+  font-size: 26px;
+}
+
+.education-qualification-body {
+  position: relative;
+  padding-left: 30px;
+}
+
+.education-qualification-body::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #ffe6e4;
+  content: "";
+}
+
+.education-content {
+  position: relative;
+}
+
+.education-content::before {
+  position: absolute;
+  left: -34px;
+  width: 13px;
+  height: 13px;
+  background-color: rgb(255 61 79);
+  border-width: 4px;
+  border-style: solid;
+  border-color: rgb(255 255 255);
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgb(255 61 79 / 30%);
+  content: "";
+}
+
+.education-images {
+  position: relative;
+  margin-left: 25px;
+}
+
+.education-img2 {
+  position: absolute;
+  top: 195px;
+  left: 125px;
 }
 
 @keyframes pulse {
@@ -327,4 +519,6 @@ section {
 
 .carousel-indicators .active {
   background-color: var(--pl-text);
+}
+
 }
