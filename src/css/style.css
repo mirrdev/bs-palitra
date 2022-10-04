@@ -27,8 +27,25 @@ html * {
   outline: none;
 }
 
+div,
+section {
+  display: block;
+}
+
+section {
+  padding-top: 22px;
+}
+
 img {
   max-width: 100%;
+}
+
+.nav-link {
+  color: var(--pl-text);
+}
+
+.nav-link:hover {
+  color: var(--pl-text-nav);
 }
 
 .img-shadow {
@@ -67,34 +84,8 @@ img {
   background-color: var(--pl-yellow);
 }
 
-div,
-section {
-  display: block;
-}
-
-section {
-  padding-top: 22px;
-}
-
-.nav-link {
-  color: var(--pl-text);
-}
-
-.nav-link:hover {
-  color: var(--pl-text-nav);
-}
-
 .card {
-  /* box-shadow: 0 6px 10px rgb(0 0 0 / 8%), 0 0 6px rgb(0 0 0 / 5%); */
-
-  /* max-height: 250px; */
   cursor: pointer;
-
-  /* padding: 14px 80px 18px 36px;
-  background: #fff;
-  border-radius: 4px; */
-
-  /* filter: drop-shadow(0.35rem 0.35rem 0.4rem rgb(0 0 0 / 50%)); */
   transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
     0.3s box-shadow,
     0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
@@ -185,7 +176,7 @@ section {
   text-align: center;
 }
 
-.palitra .logo-desc a {
+/* .palitra .logo-desc a {
   margin-top: 58px;
   padding: 25px 45px;
   color: var(--pl-text);
@@ -197,7 +188,7 @@ section {
   text-transform: uppercase;
   background: var(--pl-blue);
   border-radius: 100px;
-}
+} */
 
 @media screen and (max-width: 991px) {
   .palitra .logo-desc a {
@@ -270,6 +261,7 @@ section {
   }
 }
 
+/*
 .slider-thumb::before {
   position: absolute;
   right: 28px;
@@ -283,9 +275,9 @@ section {
   animation: slider-shape 5s linear infinite;
   will-change: border-radius, transform, opacity;
   content: "";
-}
+} */
 
-@keyframes slider-shape {
+/* @keyframes slider-shape {
   0%,
   100% {
     border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
@@ -305,7 +297,7 @@ section {
     border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
     transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
   }
-}
+} */
 
 .dtr-social-list {
   margin: 0;
@@ -399,8 +391,7 @@ section {
   color: #222;
 }
 
-/* 9. Education */
-
+/* 9.education  */
 .pt-120 {
   padding-top: 80px;
 }
