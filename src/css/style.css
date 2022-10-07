@@ -44,12 +44,16 @@ img {
   max-width: 100%;
 }
 
-.nav-link {
+.nav-link,
+.tel-link {
   color: var(--pl-text);
+  text-decoration: none;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.tel-link:hover {
   color: var(--pl-text-nav);
+  text-decoration: none;
 }
 
 .img-shadow {
@@ -309,7 +313,6 @@ img {
 
 .dtr-social-list li {
   display: inline-block;
-  margin: 0 10px;
   list-style: none;
 }
 
@@ -379,13 +382,13 @@ img {
 .portfolio-text span {
   color: #fff;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 .portfolio-text h2 {
-  margin-top: 14px;
+  margin-top: 1rem;
   margin-bottom: 0;
   color: #fff;
   font-weight: 700;
@@ -422,7 +425,7 @@ img {
   margin-bottom: 20px;
   color: #ff3d4f;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1rem;
   font-family: Rubik, sans-serif;
 }
 
